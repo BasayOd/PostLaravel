@@ -7,12 +7,14 @@
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
+
 
     <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
     <!-- overlayScrollbars -->
@@ -68,6 +70,8 @@
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
+<script src="{{asset('plugins/select2/js/select2.full.min.js')}}"></script>
+
 <script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
 <script>
     $.widget.bridge('uibutton', $.ui.button)
@@ -79,6 +83,7 @@
 <script src="{{asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
 <script src="{{asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <script src="{{asset('dist/js/adminlte.js')}}"></script>
+
 <script>
     $(document).ready(function() {
         $('#summernote').summernote({
@@ -95,6 +100,10 @@
     });
     $(function(){
         bsCustomFileInput.init()
+    })
+    $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2()
     })
 </script>
 <style>

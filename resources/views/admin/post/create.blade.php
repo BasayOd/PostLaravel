@@ -74,9 +74,6 @@
                                 <div class="text-danger">Добавьте изображение</div>
                                 @enderror
                             </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <!-- select -->
                                     <div class="form-group w-50">
                                         <label>Выберите категорию</label>
                                         <select class="form-control" name="category_id">
@@ -87,7 +84,15 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                </div>
+                            <div class="form-group">
+                                <label>Тэги</label>
+                                <select class="select2" multiple="multiple" data-placeholder="Выберите тэги" style="width: 100%;" name="tag_ids[]">
+                                    @foreach($tags as $tag)
+                                        <option value="{{$tag->id}}"
+                                            {{is_array(old('tag_ids')) && in_array($tag->id, old('tag_ids')) ? 'selected' : ''}}
+                                        >{{$tag->title}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary" value="Добавить">
