@@ -8,7 +8,7 @@ use App\Http\Requests\Admin\Category\UpdateRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
-class DestroyController extends Controller
+class DestroyController extends BaseController
 {
     public function __invoke(Post $post)
     {
