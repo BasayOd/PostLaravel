@@ -74,19 +74,20 @@
                                 <div class="text-danger">Добавьте изображение</div>
                                 @enderror
                             </div>
-                                    <div class="form-group w-50">
-                                        <label>Выберите категорию</label>
-                                        <select class="form-control" name="category_id">
-                                            @foreach($categories as $category)
-                                                <option value="{{$category->id}}"
-                                                {{$category->id==old('category_id') ? 'selected' : ''}}
-                                                >{{$category->title}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                            <div class="form-group">
+                            <div class="form-group w-50">
+                                <label>Выберите категорию</label>
+                                <select class="form-control" name="category_id">
+                                    @foreach($categories as $category)
+                                        <option value="{{$category->id}}"
+                                            {{$category->id==old('category_id') ? 'selected' : ''}}
+                                        >{{$category->title}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group w-50">
                                 <label>Тэги</label>
-                                <select class="select2" multiple="multiple" data-placeholder="Выберите тэги" style="width: 100%;" name="tag_ids[]">
+                                <select class="select2" multiple="multiple" data-placeholder="Выберите тэги"
+                                        style="width: 100%;" name="tag_ids[]">
                                     @foreach($tags as $tag)
                                         <option value="{{$tag->id}}"
                                             {{is_array(old('tag_ids')) && in_array($tag->id, old('tag_ids')) ? 'selected' : ''}}
