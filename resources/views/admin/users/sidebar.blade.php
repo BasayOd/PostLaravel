@@ -4,13 +4,13 @@
             <ul class="pt-3 nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
                 <li class="nav-item">
-                    <a href="{{route('admin.category.index')}}" class="nav-link">
-                        <i class="nav-icon far fa-folder"></i>
+                    <a href="{{route('admin.user.index')}}" class="nav-link">
+                        <i class="nav-icon far fa-user"></i>
                         <p>
-                            Категории
+                            Пользователи
                         </p>
                         <div class="mt-1">
-                            <a href="{{route('admin.category.create')}}" class="btn btn-block btn-outline-primary">Create</a>
+                            <a href="{{route('admin.user.create')}}" class="btn btn-block btn-outline-primary">Create</a>
                         </div>
                     </a>
                 </li>
@@ -31,10 +31,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('admin.user.index')}}" class="nav-link">
-                        <i class="nav-icon far fa-user"></i>
+                    <a href="{{route('admin.category.index')}}" class="nav-link">
+                        <i class="nav-icon far fa-clipboard"></i>
                         <p>
-                            Пользователи
+                            Категории
                         </p>
                     </a>
                 </li>
